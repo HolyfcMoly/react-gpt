@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+$font-family: "Manrope", sans-serif;
+
+$gradient-text: linear-gradient(90deg, #ae67fa 0%, #f49867 97%);
+$gradient-bar: linear-gradient(100deg, #ae67fa 0%, #f49867 97%);
+
+$color-bg: #040c18;
+$color-footer: #031b34;
+$color-blog: #042c54;
+$color-text: #81afdd;
+$color-light-text: #ffffff;
+$color-subtext: #ff8a71;
+
+@mixin backgroundGradient {
+    /* ff 3.6+ */
+    background: -moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+    /* safari 5.1+,chrome 10+ */
+    background: -webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+    /* opera 11.10+ */
+    background: -o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+    /* ie 10+ */
+    background: -ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+    /* global 92%+ browsers support */
+    background: radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+}

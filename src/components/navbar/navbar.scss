@@ -1,0 +1,176 @@
+@import "../../variables";
+
+.gpt3__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4.4rem;
+    padding-bottom: 1rem;
+    overflow-x: clip;
+    &-links {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        &_logo {
+            margin-right: calc((50 / 16) * 1rem);
+            img {
+                width: 3.90981rem;
+                height: 1.001rem;
+            }
+        }
+        &_list {
+            display: flex;
+            .list__item:not(:last-child) {
+                margin-right: 2.2rem;
+            }
+            .list__item-links {
+                position: relative;
+                font-size: clamp(0.9rem, 1vw, 1.125rem);
+                &::after {
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    width: 0;
+                    height: 2px;
+                    background-color: #fff;
+                    transition: width 0.3s ease-in-out;
+                }
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &-sign {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .signUp-btn {
+            margin-left: 1.25rem;
+            padding: 0.7rem 2rem;
+            font-size: 1.1rem;
+        }
+        .signIn-link {
+            position: relative;
+            transition: opacity 0.3s ease-in-out;
+            &::after {
+                position: absolute;
+                content: "";
+                display: block;
+                width: 0;
+                height: 2px;
+                background-color: #fff;
+                transition: width 0.3s ease-in-out;
+            }
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+    .list__item-links,
+    .signIn-link,
+    .signUp-btn {
+        font-weight: 500;
+        line-height: 1.5rem;
+        color: $color-light-text;
+        cursor: pointer;
+        transition: opacity 0.3s ease-in-out;
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+    &-menu {
+        position: relative;
+        display: none;
+        margin-left: 1rem;
+        svg {
+            cursor: pointer;
+        }
+        &-container {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            padding: 1.2rem;
+            min-width: 200px;
+            background-color: $color-footer;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            .gpt3__navbar-links_list {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                .list__item {
+                    padding: 0.5rem 0;
+                    &:not(:last-child) {
+                        margin: 0;
+                    }
+                    .list__item-links {
+                        &::after {
+                            right: 0;
+                        }
+                    }
+                }
+            }
+            .gpt3__navbar-sign {
+                display: none;
+                align-items: center;
+                flex-direction: column;
+                .signIn-link {
+                    padding: 0.5rem 0;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1050px) {
+    .gpt3__navbar {
+        &-links {
+            &_list {
+                display: none;
+            }
+        }
+        &-menu {
+            display: flex;
+            .gpt3__navbar-sign {
+                .signUp-btn {
+                    padding: 0.5rem 1.5rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 550px) {
+    .gpt3__navbar {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        &-sign {
+            display: none;
+        }
+        &-menu {
+            .gpt3__navbar-sign {
+                display: flex;
+                position: relative;
+                margin-top: 5px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #fff;
+                    opacity: 0.2;
+                }
+                .signUp-btn {
+                    width: 100%;
+                    margin: 0;
+                }
+                .signIn-link {
+                    &::after {
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
