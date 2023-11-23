@@ -1,0 +1,91 @@
+@import "../../variables";
+
+.gpt3__whatgpt3 {
+    margin-top: 8rem;
+    &-content {
+        display: flex;
+        flex-direction: column;
+        @include backgroundGradientWhatGPT3;
+        padding: 3.5rem;
+        &_header {
+            .gpt3__feature-container {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        &_posibilities {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5.6rem;
+            h1 {
+                width: 45%;
+            }
+            a {
+                color: #ff8a71;
+                font-size: 1rem;
+                line-height: 1.875rem;
+            }
+            &-list {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 5.6rem;
+                flex-wrap: wrap;
+                .item {
+                    padding: 5px 10px;
+                    flex: 1 1 33%;
+                    .gpt3__feature-container {
+                        flex-direction: column;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1050px) {
+    .gpt3__whatgpt3  {
+        &-content {
+            &_header {
+                .gpt3__feature-container {
+                    
+                    flex-direction: column;
+                }
+            }
+            &_posibilities {
+                align-items: flex-start;
+                flex-direction: column;
+                h1 {
+                    margin-bottom: 2rem;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 550px) {
+    .gpt3__whatgpt3  {
+        margin-top: 5rem;
+        &-content {
+            padding: 2rem 1.5rem;
+            &_posibilities {
+                margin-top: 2.5rem;
+                h1 {
+                    margin-bottom: 1rem;
+                    font-size: 1.5rem;
+                }
+                a {
+                    font-size: 0.8rem;
+                }
+                &-list {
+                    margin-top: 2.5rem;
+                    .item {
+                        padding: 5px 0;
+                        flex: unset;
+                    }
+                }
+            }
+        }
+    }
+}

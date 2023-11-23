@@ -39,9 +39,12 @@ ul {
   padding-left: calc((135 / 16) * 1rem);
 }
 
-.gradient__bg {
-  @include backgroundGradient;
+.wrapper {
+  overflow: hidden;
 }
+// .gradient__bg {
+//   @include backgroundGradient;
+// }
 
 .gradient__text {
   background: $gradient-text;
@@ -154,6 +157,7 @@ ul {
     margin: 4rem;
   }
 }
+
 
 @media screen and (max-width: 500px) {
   .container {

@@ -1,24 +1,35 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import people from "../../assets/img/Group 81.png";
 import ai from "../../assets/img/Illustration.png";
 import "./header.scss";
-
+import BlobBlur from "../../components/feature/BlobBlur";
 
 function Header() {
-  const [padding, setPadding] = useState(false);
-  
-  const switchPadding =() => {
-    const media = window.matchMedia("(max-width: 1050px)");
-    media.matches ? setPadding(true) : setPadding(false);
-  }
+    const [padding, setPadding] = useState(false);
 
-  useEffect(() => {
-    switchPadding();
-    window.addEventListener('resize', switchPadding);
-  },[])
+    const switchPadding = () => {
+        const media = window.matchMedia("(max-width: 1050px)");
+        media.matches ? setPadding(true) : setPadding(false);
+    };
+
+    useEffect(() => {
+        switchPadding();
+        window.addEventListener("resize", switchPadding);
+    }, []);
 
     return (
-        <div className={`gpt3__header container ${padding ? '' : 'right-padding'}`} id="home">
+        <div
+            className={`gpt3__header container ${
+                padding ? "" : "right-padding"
+            }`}
+            id="home"
+        >
+            <div className="gpt3__header-blob_top">
+                <BlobBlur />
+            </div>
+            <div className="gpt3__header-blob_bottom">
+                <BlobBlur />
+            </div>
             <div className="gpt3__header-content">
                 <h1 className="gradient__text">
                     Let’s Build Something amazing with GPT-3 OpenAI
@@ -45,6 +56,7 @@ function Header() {
             <div className="gpt3__header-image">
                 <img src={ai} alt="ai" />
             </div>
+            
         </div>
     );
 }

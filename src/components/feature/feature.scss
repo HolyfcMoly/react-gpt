@@ -1,0 +1,44 @@
+@import "../../variables";
+
+.gpt3__feature-container {
+    display: flex;
+
+    h2 {
+        position: relative;
+        flex: 1;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 800;
+        line-height: 4.6875rem;
+        letter-spacing: -0.06rem;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 2.3rem;
+            height: 3px;
+            background: $gradient-bar;
+        }
+    }
+    p {
+        flex: 2;
+        color: $color-text;
+        font-size: 1rem;
+        line-height: 1.875rem;
+    }
+}
+@media screen and (max-width: 550px) {
+    .gpt3__feature-container {
+        h2 {
+            font-size: 1rem;
+            line-height: 2.5rem;
+            &::before {
+                top: 0;
+            }
+        }
+        p {
+            font-size: 0.8rem;
+        }
+    }
+}

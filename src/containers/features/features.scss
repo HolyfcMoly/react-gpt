@@ -1,0 +1,103 @@
+@import "../../variables";
+
+.gpt3__features {
+    margin-top: 5.6rem;
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        &_header {
+            flex: 1 1;
+            margin-right: 8rem;
+            h1 {
+                margin-bottom: 2rem;
+                width: 97%;
+                font-size: 2.125rem;
+                font-weight: 800;
+                line-height: 2.8125rem;
+            }
+            a {
+                color: $color-subtext;
+                font-size: 1rem;
+                font-weight: 500;
+                line-height: 1.875rem;
+            }
+        }
+        &_list {
+            flex: 1.5;
+            .item {
+                padding: 1rem 0;
+                .gpt3__feature-container {
+                    h2 {
+                        flex: 0.7;
+                        margin-right: 4rem;
+                        font-size: 1.125rem;
+                        line-height: 1.5rem;
+                        letter-spacing: -0.045rem;
+                        &::before {
+                            top: -10px;
+                        }
+                    }
+                    p {
+                        color: #81afdd;
+                        font-size: 0.875rem;
+                        font-weight: 500;
+                        line-height: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1050px) {
+    .gpt3__features {
+        &-content {
+            flex-direction: column;
+            &_header {
+                margin-right: 0;
+                margin-bottom: 1rem;
+                h1 {
+                    margin-bottom: 1rem;
+                    width: 100%;
+                }
+            }
+            &_list {
+                .item {
+                    .gpt3__feature-container {
+                        h2 {
+                            flex: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 550px) {
+    .gpt3__features {
+        &-content {
+            &_header {
+                h1 {
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                }
+                a {
+                    font-size: 0.8rem;
+                }
+            }
+            &_list {
+                .item {
+                    padding: 0.6rem 0;
+                    .gpt3__feature-container {
+                        h2 {
+                            margin-right: 2rem;
+                            font-size: 0.8rem;
+                        }
+                        p {
+                            font-size: 0.7rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

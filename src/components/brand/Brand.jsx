@@ -11,19 +11,19 @@ function Brand() {
     <div className='gpt3__brands container'>
       <ul className="gpt3__brands-list">
         <li className="gpt3__brands-list_item">
-          <img src="" alt="" />
+          <img src={goggle} alt="google" />
         </li>
         <li className="gpt3__brands-list_item">
-          <img src="" alt="" />
+          <img src={slack} alt="slack" />
         </li>
         <li className="gpt3__brands-list_item">
-          <img src="" alt="" />
+          <img src={atlassian} alt="atlassian" />
         </li>
         <li className="gpt3__brands-list_item">
-          <img src="" alt="" />
+          <img src={dropbox} alt="dropbox" />
         </li>
         <li className="gpt3__brands-list_item">
-          <img src="" alt="" />
+          <img src={shopify} alt="shopify" />
         </li>
       </ul>
     </div>

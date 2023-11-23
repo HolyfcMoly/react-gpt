@@ -2,6 +2,25 @@
 
 .gpt3__header {
     display: flex;
+    position: relative;
+    
+    &-blob_top {
+        .blob__blur {
+            top: -250px;
+            left: -500px;
+        }
+    }
+    &-blob_bottom {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        .blob__blur {
+            top: -299px;
+            left: -280px;
+            width: 34rem;
+            height: 32rem;
+        }
+    }
     &-content {
         flex: 1;
         display: flex;
@@ -44,6 +63,10 @@
                 line-height: 1.5rem;
                 font-weight: 700;
                 border-radius: 0 5px 5px 0;
+                transition: opacity 0.3s ease-in-out;
+                &:hover {
+                    opacity: 0.7;
+                }
             }
         }
         &_people {
@@ -54,6 +77,7 @@
                 height: 38px;
             }
             span {
+                font-size: 0.75rem;
                 margin-left: 1rem;
                 color: #fff;
             }
