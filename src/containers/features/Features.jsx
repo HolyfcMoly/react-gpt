@@ -1,6 +1,7 @@
 import React from "react";
 import "./features.scss";
 import { Feature } from "../../components";
+import BlobBlur from "../../components/feature/BlobBlur";
 
 const featureData = [
     {
@@ -23,8 +24,11 @@ const featureData = [
 
 function Features() {
     return (
-        <div className="gpt3__features container">
+        <div className="gpt3__features container" id="features">
             <div className="gpt3__features-content">
+            <div className="gpt3__features-content_blob-top">
+                <BlobBlur />
+            </div>
                 <div className="gpt3__features-content_header">
                     <h1 className="gradient__text">
                         The Future is Now and You Just Need To Realize It. Step
@@ -35,7 +39,7 @@ function Features() {
                 <ul className="gpt3__features-content_list">
                     {featureData.map((item, index) => {
                         return (
-                            <li className="item" key={'id: ' + index}>
+                            <li className="item" key={'id:' + index}>
                                 <Feature
                                     title={item.title}
                                     text={item.text}

@@ -1,0 +1,67 @@
+@import "../../variables";
+
+.gpt3__footer {
+    margin-top: 8rem;
+    background-color: $color-footer;
+    &-container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10rem;
+        padding-bottom: 1.7rem;
+        &_heading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h1 {
+                margin-bottom: 4rem;
+                text-align: center;
+                font-size: 3.875rem;
+                font-weight: 800;
+                line-height: 4.6875rem;
+                letter-spacing: -0.155rem;
+            }
+            &-btn {
+                padding: 1.2rem;
+                color: #fff;
+                font-size: 1.125rem;
+                background-color: transparent;
+                border: 1px solid #fff;
+                border-radius: unset;
+            }
+        }
+        &_content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 11rem;
+            &-logo {
+                flex: 1;
+                img {
+                }
+                p {
+                    margin-top: 1.5rem;
+                    color: #fff;
+                    font-size: 0.75rem;
+                }
+            }
+            &-menu {
+                flex: 1.5;
+                .menu-list {
+                    display: flex;
+                }
+            }
+        }
+        &_copyrights {
+            margin-top: 5rem;
+            text-align: center;
+            p {
+                color: #fff;
+                font-size: 0.75rem;
+            }
+        }
+    }
+}
+.switch-padding {
+    padding-left: 13rem;
+    padding-right: 13rem;
+}

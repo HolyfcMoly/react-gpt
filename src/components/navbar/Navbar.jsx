@@ -22,7 +22,7 @@ function Navbar() {
                     </a>
                 </li>
                 <li className="list__item">
-                    <a href="!#" className="list__item-links">
+                    <a href="#whatgpt3" className="list__item-links">
                         What is GPT?
                     </a>
                 </li>
@@ -32,7 +32,7 @@ function Navbar() {
                     </a>
                 </li>
                 <li className="list__item">
-                    <a href="!#" className="list__item-links">
+                    <a href="#features" className="list__item-links">
                         Case Studies
                     </a>
                 </li>

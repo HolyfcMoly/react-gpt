@@ -1,16 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import people from "../../assets/img/Group 81.png";
 import ai from "../../assets/img/Illustration.png";
 import "./header.scss";
 import BlobBlur from "../../components/feature/BlobBlur";
 
-function Header() {
-    const [padding, setPadding] = useState(false);
-
-    const switchPadding = () => {
-        const media = window.matchMedia("(max-width: 1050px)");
-        media.matches ? setPadding(true) : setPadding(false);
-    };
+function Header({padding, switchPadding}) {
 
     useEffect(() => {
         switchPadding();

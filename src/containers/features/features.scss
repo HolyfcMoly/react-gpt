@@ -3,6 +3,7 @@
 .gpt3__features {
     margin-top: 5.6rem;
     &-content {
+        position: relative;
         display: flex;
         justify-content: space-between;
         &_header {
@@ -46,6 +47,11 @@
                 }
             }
         }
+        &_blob-top{
+            .blob__blur {
+                left: -1000px;
+            }
+        }
     }
 }
 @media screen and (max-width: 1050px) {
@@ -67,6 +73,11 @@
                             flex: 1;
                         }
                     }
+                }
+            }
+            &_blob-top{
+                .blob__blur {
+                    left: -450px;
                 }
             }
         }
