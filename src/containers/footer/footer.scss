@@ -14,40 +14,68 @@
             align-items: center;
             h1 {
                 margin-bottom: 4rem;
+                width: 88%;
                 text-align: center;
-                font-size: 3.875rem;
+                font-size: clamp(2.3rem, 5vw, 3.875rem);
                 font-weight: 800;
-                line-height: 4.6875rem;
+                line-height: clamp(2.5rem, 10vw, 4.6875rem);
                 letter-spacing: -0.155rem;
             }
             &-btn {
                 padding: 1.2rem;
                 color: #fff;
-                font-size: 1.125rem;
+                font-size: clamp(0.75rem, 3vw, 1.125rem);
                 background-color: transparent;
                 border: 1px solid #fff;
                 border-radius: unset;
             }
         }
         &_content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             margin-top: 11rem;
-            &-logo {
-                flex: 1;
-                img {
-                }
-                p {
-                    margin-top: 1.5rem;
-                    color: #fff;
-                    font-size: 0.75rem;
-                }
-            }
             &-menu {
-                flex: 1.5;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2rem 2.5rem;
                 .menu-list {
-                    display: flex;
+                    &__item {
+                        flex: 1;
+                        display: flex;
+                        flex-direction: column;
+                        max-width: 7rem;
+                        &-logo {
+                            flex: 1;
+                            img {
+                                max-width: 100%;
+                            }
+                            p {
+                                margin-top: 1.5rem;
+                                max-width: 34%;
+                                color: #fff;
+                                font-size: 0.75rem;
+                            }
+                        }
+                        h2 {
+                            margin-bottom: 2rem;
+                            color: #fff;
+                            font-size: 0.875rem;
+                        }
+                        &-links {
+                            display: flex;
+                            flex-direction: column;
+                            a {
+                                color: #fff;
+                                font-size: 0.75rem;
+                                line-height: 1.25rem;
+                                opacity: 0.8;
+                            }
+                            a:not(:last-child) {
+                                margin-bottom: 1.6rem;
+                            }
+                        }
+                    }
+                    &__item:first-child {
+                        max-width: 100%;
+                    }
                 }
             }
         }
@@ -64,4 +92,31 @@
 .switch-padding {
     padding-left: 13rem;
     padding-right: 13rem;
+}
+@media screen and (max-width: 1050px) {
+    .gpt3__footer {
+        .menu-list__item-logo {
+            p {
+                max-width: 60%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gpt3__footer {
+        &-container {
+            padding-top: 7rem;
+            &_content {
+                margin-top: 9rem;
+                &-menu {
+                    .menu-list__item-logo {
+                        p {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
