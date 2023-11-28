@@ -25,12 +25,12 @@
         &_right {
             flex: 1;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
             gap: 3rem;
         }
     }
 }
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1100px) {
     .gpt3__blog {
         &-header {
             h1 {
