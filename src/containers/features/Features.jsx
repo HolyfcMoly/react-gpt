@@ -2,6 +2,7 @@ import React from "react";
 import "./features.scss";
 import { Feature } from "../../components";
 import BlobBlur from "../../components/feature/BlobBlur";
+import { useInView } from "react-intersection-observer";
 
 const featureData = [
     {
@@ -23,14 +24,26 @@ const featureData = [
 ];
 
 function Features() {
+    const { ref, inView } = useInView({
+        threshold: 0.5,
+        triggerOnce: true,
+    });
     return (
-        <div className="gpt3__features container" id="features">
+        <div
+            className={`gpt3__features container ${inView ? "slide-top" : ""}`}
+            id="features"
+            ref={ref}
+        >
             <div className="gpt3__features-content">
-            <div className="gpt3__features-content_blob-top">
-                <BlobBlur />
-            </div>
+                <div className="gpt3__features-content_blob-top">
+                    <BlobBlur />
+                </div>
                 <div className="gpt3__features-content_header">
-                    <h1 className="gradient__text">
+                    <h1
+                        className={`gradient__text ${
+                            inView ? "slide-right-text" : ""
+                        }`}
+                    >
                         The Future is Now and You Just Need To Realize It. Step
                         into Future Today & Make it Happen.
                     </h1>
@@ -39,11 +52,13 @@ function Features() {
                 <ul className="gpt3__features-content_list">
                     {featureData.map((item, index) => {
                         return (
-                            <li className="item" key={'id:' + index}>
-                                <Feature
-                                    title={item.title}
-                                    text={item.text}
-                                />
+                            <li
+                                className={`item ${
+                                    inView ? "slide-left-text" : ""
+                                }`}
+                                key={"id:" + index}
+                            >
+                                <Feature title={item.title} text={item.text} />
                             </li>
                         );
                     })}

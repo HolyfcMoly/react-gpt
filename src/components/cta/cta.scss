@@ -2,6 +2,7 @@
 
 .gpt3__cta {
     margin-top: 5.6rem;
+    opacity: 0;
     &-content {
         display: flex;
         justify-content: space-between;
@@ -32,6 +33,10 @@
             line-height: 1.875rem;
             border-radius: 2.5rem;
             background-color: #080808;
+            transition: background-color 0.3s ease-in-out;
+        }
+        &_button:hover, &_button:active {
+            background-color: #1d1d1d;
         }
     }
 }

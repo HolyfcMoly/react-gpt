@@ -8,10 +8,10 @@ function Navbar() {
     const [animate, setAnimate] = useState(false);
 
     const handleAnimation = () => {
-        if(!animate) {
-            setToggle(false)
+        if (!animate) {
+            setToggle(false);
         }
-    }
+    };
 
     const ListItems = () => {
         return (
@@ -49,7 +49,9 @@ function Navbar() {
         <div className="gpt3__navbar  container">
             <div className="gpt3__navbar-links">
                 <div className="gpt3__navbar-links_logo">
-                    <img src={logo} alt="logo" />
+                    <a href="#home">
+                        <img src={logo} alt="logo" />
+                    </a>
                 </div>
                 <ul className="gpt3__navbar-links_list">
                     <ListItems />
@@ -72,12 +74,20 @@ function Navbar() {
                     <RiMenu3Line
                         color="#fff"
                         size={27}
-                        onClick={() => {setAnimate(true); setToggle(true)}}
+                        onClick={() => {
+                            setAnimate(true);
+                            setToggle(true);
+                        }}
                     />
                 )}
                 {toggle && (
-                    <div className={`gpt3__navbar-menu-container ${animate ? "slide-left" : "slide-right"}`} onTransitionEnd={handleAnimation}
-                    onAnimationEnd={handleAnimation}>
+                    <div
+                        className={`gpt3__navbar-menu-container ${
+                            animate ? "slide-left" : "slide-right"
+                        }`}
+                        onTransitionEnd={handleAnimation}
+                        onAnimationEnd={handleAnimation}
+                    >
                         <ul className="gpt3__navbar-links_list">
                             <ListItems />
                         </ul>

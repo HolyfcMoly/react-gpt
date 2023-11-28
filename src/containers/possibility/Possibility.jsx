@@ -1,34 +1,55 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./possibility.scss";
-import possibility from "../../assets/img/possibility.png";
+import possibility from "../../assets/img/possibility.webp";
+import { useInView } from "react-intersection-observer";
 
-function Possibility({ padding, switchPadding }) {
-    useEffect(() => {
-        switchPadding();
-        window.addEventListener("resize", switchPadding);
-    }, []);
-
+function Possibility(padding) {
+    const { ref, inView } = useInView({
+        threshold: 0.3,
+        triggerOnce: true,
+    });
     return (
         <div
-            className={`gpt3__possibility ${
-                padding ? "" : "switch__padding"
+            className={`gpt3__possibility ${padding ? "" : "switch__padding"} ${
+                inView ? "slide-top" : ""
             } container`}
+            ref={ref}
         >
-            <div className="gpt3__possibility-image">
-                <img src={possibility} alt="possibility" />
+            <div
+                className={`gpt3__possibility-image ${
+                    inView ? "slide-right-text" : ""
+                }`}
+            >
+                {inView ? <img src={possibility} alt="possibility"/> : '' }
             </div>
             <div className="gpt3__possibility-content">
-                <a href="!#">Request Early Access to Get Started</a>
-                <h1 className="gradient__text">
+                <div
+                    className={`gpt3__possibility-content_link ${
+                        inView ? "slide-bottom-text" : ""
+                    }`}
+                >
+                    <a href="!#">Request Early Access to Get Started</a>
+                </div>
+                <h1
+                    className={`gradient__text ${
+                        inView ? "slide-bottom-text" : ""
+                    }`}
+                >
                     The possibilities are beyond your imagination
                 </h1>
-                <p>
+                <p className={`${inView ? "slide-bottom-text" : ""}`}>
                     Yet bed any for travelling assistance indulgence unpleasing.
                     Not thoughts all exercise blessing. Indulgence way
                     everything joy alteration boisterous the attachment. Party
                     we years to order allow asked of.
                 </p>
-                <a href="!#">Request Early Access to Get Started</a>
+                <div
+                    className={`gpt3__possibility-content_link ${
+                        inView ? "slide-bottom-text" : ""
+                    }`}
+                >
+                    <a href="!#">Request Early Access to Get Started</a>
+                </div>
             </div>
         </div>
     );

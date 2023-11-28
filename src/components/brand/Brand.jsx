@@ -8,7 +8,7 @@ import slack from '../../assets/img/slack.png';
 
 function Brand() {
   return (
-    <div className='gpt3__brands container'>
+    <div className='gpt3__brands container slide-top-text'>
       <ul className="gpt3__brands-list">
         <li className="gpt3__brands-list_item">
           <img src={goggle} alt="google" />
