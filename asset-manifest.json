@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/react-food/static/css/main.bd371924.css",
+    "main.js": "/react-food/static/js/main.74e00367.js",
+    "static/media/possibility.webp": "/react-food/static/media/possibility.e7ab373e3d95fc83c425.webp",
+    "static/media/blog04.png": "/react-food/static/media/blog04.2757b25c333d4a97c9ec.png",
+    "static/media/blog05.png": "/react-food/static/media/blog05.deac420d75533a59b915.png",
+    "static/media/blog02.png": "/react-food/static/media/blog02.aa49db00f156e4a80ada.png",
+    "static/media/blog01.webp": "/react-food/static/media/blog01.e0d99ae75c39507c9958.webp",
+    "static/media/blog03.webp": "/react-food/static/media/blog03.f0127975c0c0d56eb792.webp",
+    "static/media/Illustration.png": "/react-food/static/media/Illustration.8fe4b6d3f25e862bb8f9.png",
+    "static/media/Group 81.png": "/react-food/static/media/Group 81.4c913da320ea032e19ba.png",
+    "static/media/dropbox.png": "/react-food/static/media/dropbox.82f375cac5decf9cb393.png",
+    "static/media/atlassian.png": "/react-food/static/media/atlassian.799a761889177e604be8.png",
+    "static/media/logo.svg": "/react-food/static/media/logo.cf6810c94fbac0cc653f939ff5723cf4.svg",
+    "index.html": "/react-food/index.html",
+    "main.bd371924.css.map": "/react-food/static/css/main.bd371924.css.map",
+    "main.74e00367.js.map": "/react-food/static/js/main.74e00367.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd371924.css",
+    "static/js/main.74e00367.js"
+  ]
+}
